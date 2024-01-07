@@ -1,0 +1,2 @@
+here we test if the command remove all the commits in this file
+here we go!
