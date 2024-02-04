@@ -1,13 +1,18 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-header, nav, article, footer {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
@@ -15,17 +20,12 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
+nav li {
     display: inline;
     margin-right: 10px;
 }
 
-a {
+nav a {
     text-decoration: none;
-    color: #007bff;
+    color: #fff;
 }
-
-a:hover {
-    text-decoration: underline;
-}
-
