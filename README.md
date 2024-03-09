@@ -44,7 +44,7 @@ https://git-scm.com/downloads
 Branch (rama): Son líneas que se usan para hacer experimentos, cambios, solucionar conflictos o arreglar bugs.\
 En algún punto del branch, uno lo puede unir o fusionar (merch) para recuperar los mejor de ambas versiones.\
 
-- Los pasos para crear un rama:
+## Los pasos para crear un rama:
 1) Abre tu terminal o línea de comandos: Abre la terminal en tu computadora.
 
 2) Navega hasta el directorio de tu repositorio Git: Utiliza el comando cd para cambiar al directorio donde está tu repositorio Git.
@@ -67,14 +67,21 @@ git checkout -b nueva-funcionalidad
 >   git branch -m main
 > ```
 
-**Si quieres hacer experimentos con ramas:**
+Si quieres hacer experimentos con ramas:**
 - **Branch Development:** Cuando decides hacer experimentos, puedes generar ramas experimentales (usualmente llamadas development), que están basadas en alguna rama main, pero sobre las cuales puedes hacer cambios a tu gusto sin necesidad de afectar directamente al código principal.
 
 
 - **Branch Hotfix:** En otros casos, si encuentras un bug o error de código en la rama Main (que afecta al proyecto en producción), tendrás que crear una nueva rama (que usualmente se llaman bug fixing o hot fix) para hacer los arreglos necesarios. Cuando los cambios estén listos, los tendrás que fusionar con la rama Main para que los cambios sean aplicados mediante un comando llamado Merge, que mezcla los cambios de la rama que originaste a la rama Main. _(esto será mostrado más adelante)_
 
+# Git checkout y git reset (volviendo al pasado)
 
+## Git checkout:
+El comando ```git checkout + ID del commit``` nos permite viajar en el tiempo. Solo para chequear cómo era mi documento antes, pero si le hago un commit puede quedarse ahí como está. [*cuidado*]
 
+**Si quieres regresar a tu versión original:**
+```git checkout master [file name]```: esto es para regresar a su estado original luego de hacerle el checkout de tipo anterior.
+
+## Git reset:
 
 
 **Link de referencias para hacer este Readme:**
