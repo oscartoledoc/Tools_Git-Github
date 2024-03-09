@@ -1,24 +1,14 @@
 # Herramientas más importantes de Git y GitHub
 
-# ¿Qué es Git?
+## ¿Qué es Git?
 Git es un sistema de control de versiones distribuido que te permite registrar los cambios que haces en tus archivos y volver a versiones anteriores si algo sale mal. Fue diseñado por Linus Torvalds para garantizar la eficiencia y confiabilidad del mantenimiento de versiones de aplicaciones que tienen un gran número de archivos de código fuente.\
 
-# ¿Qué es Github?
+## ¿Qué es Github?
 GitHub es una plataforma que nos permite guardar repositorios de Git que podemos usar como servidores remotos y ejecutar algunos comandos de forma visual e interactiva (sin necesidad de la consola de comandos).\
 
 - Instalación de Git: (para Windows, MAC y Linux)
 https://git-scm.com/downloads
 
-# Herramientas más importantes de Git y GitHub
-
-# ¿Qué es Git?
-Git es un sistema de control de versiones distribuido que te permite registrar los cambios que haces en tus archivos y volver a versiones anteriores si algo sale mal. Fue diseñado por Linus Torvalds para garantizar la eficiencia y confiabilidad del mantenimiento de versiones de aplicaciones que tienen un gran número de archivos de código fuente.\
-
-# ¿Qué es Github?
-GitHub es una plataforma que nos permite guardar repositorios de Git que podemos usar como servidores remotos y ejecutar algunos comandos de forma visual e interactiva (sin necesidad de la consola de comandos).\
-
-- Instalación de Git: (para Windows, MAC y Linux)
-https://git-scm.com/downloads
 
 ## Comandos para iniciar tu repositorio con Git
 **Directorio**: una ubicación de almacenamiento en tu sistema de archivos \
@@ -43,16 +33,50 @@ https://git-scm.com/downloads
 1. **Staging**: la memoria RAM. Estado temporal de archivos que voy agregando, ahí voy poniendo la modificaciones antes del commit. Va entre directorio y repositorio.
 2. **Untracked**: no mapeado (sin el git add)
 3. **Tracked**: mapeado (con git add)
+ 
+### Diagrama de secuencia
+![Sequence Diagrama](https://i.imgur.com/IRUmDNc.jpg)
 
-### Sequence Diagram
-                    
-```seq
-Directorio-->Staging: Git add 
-Staging-->Repositorio: Git commit 
-Directorio-->Staging: (Tracked) 
-```
 >[!NOTE]
 >En el directorio, por defecto, los archivos están **Untracked**.
 
-~~***Aquí poner imagen***~~
+# Ramas (branches) y cómo funcionan
+Branch (rama): Son líneas que se usan para hacer experimentos, cambios, solucionar conflictos o arreglar bugs.\
+En algún punto del branch, uno lo puede unir o fusionar (merch) para recuperar los mejor de ambas versiones.\
 
+- Los pasos para crear un rama:
+1) Abre tu terminal o línea de comandos: Abre la terminal en tu computadora.
+
+2) Navega hasta el directorio de tu repositorio Git: Utiliza el comando cd para cambiar al directorio donde está tu repositorio Git.
+
+3) Crea la rama: Utiliza el comando git branch seguido del nombre que desees para tu nueva rama. Por ejemplo, si quieres crear una rama llamada "nueva-funcionalidad", escribe:
+   
+```git
+git branch nueva-funcionalidad
+```
+
+4) Cambia a la nueva rama: Si deseas trabajar en la nueva rama de inmediato, puedes cambiar a ella utilizando el comando git checkout:
+   
+```git
+git checkout -b nueva-funcionalidad
+```
+
+> [!IMPORTANT]
+> Líneas arriba te había mencionado que ya no se usa _**master**_ como rama por defecto, sino se usa _**main**_. Para hacer este cambio debes escribir este comando:
+> ```git
+>   git branch -m main
+> ```
+
+**Si quieres hacer experimentos con ramas:**
+- **Branch Development:** Cuando decides hacer experimentos, puedes generar ramas experimentales (usualmente llamadas development), que están basadas en alguna rama main, pero sobre las cuales puedes hacer cambios a tu gusto sin necesidad de afectar directamente al código principal.
+
+
+- **Branch Hotfix:** En otros casos, si encuentras un bug o error de código en la rama Main (que afecta al proyecto en producción), tendrás que crear una nueva rama (que usualmente se llaman bug fixing o hot fix) para hacer los arreglos necesarios. Cuando los cambios estén listos, los tendrás que fusionar con la rama Main para que los cambios sean aplicados mediante un comando llamado Merge, que mezcla los cambios de la rama que originaste a la rama Main. _(esto será mostrado más adelante)_
+
+
+
+
+
+**Link de referencias para hacer este Readme:**
+> - [This was done with Markdown Code](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+> - [Markdown for code](https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks)
