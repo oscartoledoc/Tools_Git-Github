@@ -67,7 +67,7 @@ git checkout -b nueva-funcionalidad
 >   git branch -m main
 > ```
 
-Si quieres hacer experimentos con ramas:**
+Si quieres hacer experimentos con ramas:
 - **Branch Development:** Cuando decides hacer experimentos, puedes generar ramas experimentales (usualmente llamadas development), que están basadas en alguna rama main, pero sobre las cuales puedes hacer cambios a tu gusto sin necesidad de afectar directamente al código principal.
 
 
@@ -82,6 +82,18 @@ El comando ```git checkout + ID del commit``` nos permite viajar en el tiempo. S
 ```git checkout master [file name]```: esto es para regresar a su estado original luego de hacerle el checkout de tipo anterior.
 
 ## Git reset:
+Se utiliza para deshacer cambios en el repositorio local. Es una herramienta poderosa que permite ajustar el historial de commits y el estado del área de preparación (index) y el árbol de trabajo (working directory). O sea lo que hace es deshacer commits definitiva o temporalmente.
+
+Opciones de ```git reset```:
+- ```git reset [código del commit] --soft``` : desahace el commit, pero los cambios permanecen en el área de staging.
+- ```git reset [código del commit] --hard``` : desahace el commit definitivamente sin dejar histórico ni en el área de staging
+
+![Sequence Diagrama](https://i.imgur.com/MHelk9e.jpg)
+
+>[!NOTE]
+>Para ver el [código del commit] puedo usar ```git log```:
+
+El código tiene la forma: **43ca82e36870b9d529b216d78974f0ff9a799389**
 
 
 **Link de referencias para hacer este Readme:**
