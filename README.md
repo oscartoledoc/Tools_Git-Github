@@ -103,9 +103,8 @@ Opciones de ```git reset```:
 ![Sequence Diagrama](https://i.imgur.com/MHelk9e.jpg)
 
 >[!NOTE]
->Para ver el [código del commit] puedo usar ```git log```:
-
-El código tiene la forma: **43ca82e36870b9d529b216d78974f0ff9a799389**
+>Para ver el [código del commit] puedo usar ```git log```:\
+>El código tiene la forma: **43ca82e36870b9d529b216d78974f0ff9a799389**
 
 
 
