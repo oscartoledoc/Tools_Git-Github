@@ -1,7 +1,7 @@
 # Herramientas más importantes de Git y GitHub
 
 ## ¿Qué es Git?
-Git es un sistema de control de versiones distribuido que te permite registrar los cambios que haces en tus archivos y volver a versiones anteriores si algo sale mal. Fue diseñado por Linus Torvalds para garantizar la eficiencia y confiabilidad del mantenimiento de versiones de aplicaciones que tienen un gran número de archivos de código fuente.\
+Git es un sistema de control de versiones distribuido que te permite registrar los cambios que haces en tus archivos y volver a versiones anteriores si algo sale mal. Fue diseñado por Linus Torvalds para garantizar la eficiencia y confiabilidad del mantenimiento de versiones de aplicaciones que tienen un gran número de archivos de código fuente.
 
 ## ¿Qué es Github?
 GitHub es una plataforma que nos permite guardar repositorios de Git que podemos usar como servidores remotos y ejecutar algunos comandos de forma visual e interactiva (sin necesidad de la consola de comandos).\
@@ -33,12 +33,24 @@ https://git-scm.com/downloads
 1. **Staging**: la memoria RAM. Estado temporal de archivos que voy agregando, ahí voy poniendo la modificaciones antes del commit. Va entre directorio y repositorio.
 2. **Untracked**: no mapeado (sin el git add)
 3. **Tracked**: mapeado (con git add)
- 
+
 ### Diagrama de secuencia
 ![Sequence Diagrama](https://i.imgur.com/IRUmDNc.jpg)
 
 >[!NOTE]
 >En el directorio, por defecto, los archivos están **Untracked**.
+
+### Paso a paso para hacer tu 1er commit:
+
+- ```git init``` : iniciar el seguimiento del directorio local. Ejecutar dentro del directorio que quieres hacer seguimiento.
+- ```git add [nombre del archivo]``` : preparar o mover al área de preparación (staging) los archivos modificados.
+- ```git add .``` : preparar TODOS los archivos a la vez al staging.
+- ```git commit -m [nombrar el commit]``` : luego del git add, ya puedes nombrar el commit o versión de tu archivo cambiado.
+
+>[!NOTE]
+>```git commit --amend -m "nombre nuevo"``` : Esto es para cambiar el nombre del último commit hecho por si nos equivocamos.\
+>```Git mv [file name] [new file name]``` : Esto es para cambiar el nombre del último commit hecho por si nos equivocamos.
+
 
 # Ramas (branches) y cómo funcionan
 Branch (rama): Son líneas que se usan para hacer experimentos, cambios, solucionar conflictos o arreglar bugs.\
@@ -94,6 +106,8 @@ Opciones de ```git reset```:
 >Para ver el [código del commit] puedo usar ```git log```:
 
 El código tiene la forma: **43ca82e36870b9d529b216d78974f0ff9a799389**
+
+
 
 
 **Link de referencias para hacer este Readme:**
